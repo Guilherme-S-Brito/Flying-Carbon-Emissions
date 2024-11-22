@@ -1,3 +1,36 @@
 body {
-    background: #c5d1be;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+.container {
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+canvas {
+    border: 1px solid #000000;
+}
+
+p {
+    font-weight: bold;
+}
+
+#error-message {
+    color: red;
 }

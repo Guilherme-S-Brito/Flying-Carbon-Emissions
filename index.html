@@ -3,49 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>World Map with Airport Selection and Distance Calculation</title>
-    <link rel="stylesheet" href="assets/css/style.jss">
+    <title>World Map with Airport and Aircraft Category Selection</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 </head>
 <body>
     <div class="container">
-        <h1>Select Departure and Arrival Airports</h1>
+        <h1>Select Route and Aircraft Category</h1>
         
         <label for="departure-airport">Departure Airport:</label>
         <select id="departure-airport">
-            <option value="" disabled selected>Select an airport</option>
-            <option value="ATL">Hartsfield-Jackson Atlanta International Airport (ATL)</option>
+            <option value="" disabled selected>Select a departure airport</option>
+            <option value="ATL">Atlanta International Airport (ATL)</option>
             <option value="GRU">São Paulo-Guarulhos International Airport (GRU)</option>
             <option value="DEN">Denver International Airport (DEN)</option>
-            <option value="JNB">O.R. Tambo International Airport (JNB)</option>
+            <option value="JNB">Johannesburg International Airport (JNB)</option>
             <option value="LAX">Los Angeles International Airport (LAX)</option>
-            <option value="PEK">Beijing Capital International Airport (PEK)</option>
+            <option value="PEK">Beijing International Airport (PEK)</option>
             <option value="DXB">Dubai International Airport (DXB)</option>
             <option value="LHR">London Heathrow Airport (LHR)</option>
-            <option value="SYD">Sydney Kingsford Smith International Airport (SYD)</option>
-            <option value="CDG">Charles de Gaulle Airport (CDG)</option>
+            <option value="SYD">Sydney International Airport (SYD)</option>
+            <option value="CDG">Paris-Charles de Gaulle International Airport (CDG)</option>
         </select>
 
         <label for="arrival-airport">Arrival Airport:</label>
         <select id="arrival-airport">
-            <option value="" disabled selected>Select an airport</option>
-            <option value="ATL">Hartsfield-Jackson Atlanta International Airport (ATL)</option>
+            <option value="" disabled selected>Select an arrival airport</option>
+            <option value="ATL">Atlanta International Airport (ATL)</option>
             <option value="GRU">São Paulo-Guarulhos International Airport (GRU)</option>
             <option value="DEN">Denver International Airport (DEN)</option>
-            <option value="JNB">O.R. Tambo International Airport (JNB)</option>
+            <option value="JNB">Johannesburg International Airport (JNB)</option>
             <option value="LAX">Los Angeles International Airport (LAX)</option>
-            <option value="PEK">Beijing Capital International Airport (PEK)</option>
+            <option value="PEK">Beijing International Airport (PEK)</option>
             <option value="DXB">Dubai International Airport (DXB)</option>
             <option value="LHR">London Heathrow Airport (LHR)</option>
-            <option value="SYD">Sydney Kingsford Smith International Airport (SYD)</option>
-            <option value="CDG">Charles de Gaulle Airport (CDG)</option>
+            <option value="SYD">Sydney International Airport (SYD)</option>
+            <option value="CDG">Paris-Charles de Gaulle International Airport (CDG)</option>
         </select>
-        
+
         <button onclick="displayMap()">Show on Map</button>
-        <canvas id="myCanvas" width="800" height="400" style="border:1px solid #000000;"></canvas>
-        <p id="distance-display"></p>
+        <canvas id="myCanvas" width="1280" height="644"></canvas>
+        
+        <p id="error-message"></p>
+        <p id="aircraft-info"></p>
+        <div id="bar-chart" style="width: 500px; height: 300px;"></div>
+        <div id="pie-chart" style="width: 500px; height: 300px;"></div>
     </div>
-
-<script src="assets/js/script.js"></script>
-
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
