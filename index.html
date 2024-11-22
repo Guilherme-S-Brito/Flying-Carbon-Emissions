@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>World Map with Airport and Aircraft Category Selection</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Load Google Charts Library -->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 </head>
 <body>
     <div class="container">
         <h1>Select Route and Aircraft Category</h1>
         
-        <label for="departure-airport">Departure Airport:</label>
+               <label for="departure-airport">Departure Airport:</label>
         <select id="departure-airport">
-            <option value="" disabled selected>Select a departure airport</option>
+            <option value="" disabled selected>Select an departure airport</option>
             <option value="ATL">Atlanta International Airport (ATL)</option>
             <option value="GRU">São Paulo-Guarulhos International Airport (GRU)</option>
             <option value="DEN">Denver International Airport (DEN)</option>
@@ -42,13 +43,16 @@
         </select>
 
         <button onclick="displayMap()">Show on Map</button>
-        <canvas id="myCanvas" width="1280" height="644"></canvas>
+        <canvas id="myCanvas" width="1280" height="644" style="border:1px solid #000000;"></canvas>
         
-        <p id="error-message"></p>
-        <p id="aircraft-info"></p>
+        <!-- Error message display -->
+        <p id="error-message" style="color: red; font-weight: bold;"></p>
+        <!-- Aircraft, fuel burn, and CO2 emissions display -->
+        <p id="aircraft-info" style="font-weight: bold;"></p>
+        
+        <!-- Containers for Google Charts -->
         <div id="bar-chart" style="width: 500px; height: 300px;"></div>
         <div id="pie-chart" style="width: 500px; height: 300px;"></div>
     </div>
-    <script src="assets/js/script.js"></script>
 </body>
 </html>
